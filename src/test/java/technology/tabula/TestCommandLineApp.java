@@ -64,6 +64,7 @@ public class TestCommandLineApp {
         Path csvPath = tmpFolder.resolve(fs.getPath("spreadsheet.csv"));
         assertTrue(csvPath.toFile().exists());
         assertArrayEquals(expectedCsv.getBytes(), Files.readAllBytes(csvPath));
+        Files.delete(csvPath);
     }
 
     @Test
